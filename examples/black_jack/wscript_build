@@ -1,0 +1,22 @@
+# #! /usr/bin/env python
+# # encoding: utf-8
+
+bld.program(
+    features='cxx',
+    source=[
+        'BlackJackClient.cpp',
+        'stdafx.cpp'
+    ],
+    target='BlackJackClient',
+    use=['cpprestsdk'])
+
+bld.program(
+    features='cxx',
+    source=[
+        'BlackJack_Server.cpp',
+        'stdafx.cpp',
+        'Table.cpp',
+        'Dealer.cpp'
+    ],
+    target='BlackJackServer',
+    use=['cpprestsdk'])
